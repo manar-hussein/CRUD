@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURD Mangement system</title>
+    <link rel="stylesheet" href="./CSS/all.min.css">
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+
+    <section id="curd" class="vh-100">
+        <div class="container-fluid text-white fst-italic layer w-100 vh-100 mx-auto">
+            <div class="head text-center fw-bolder">
+                <h2 class="m-0 p-0">CURD Mangement system</h2>
+            </div>
+            <div class="row mb-2 mx-auto fw-bold">
+                <div class="col-10 mx-auto mb-2">
+                    <label for="productName" class="form-label">Product Name</label>
+                    <input oninput="formValidation(this.value)" type="text" id="productName" class="w-100 form-control ">
+                    <p  id="guidName" class="d-none text-danger">Invaild Name - Suppos start with capital character</p>
+                </div>
+
+                <div class="col-10 mx-auto mb-2">
+                    <label for="productCat" class="form-label">Product Catogery</label>
+                    <input type="text" id="productCat" class="w-100 form-control" oninput="categoryValidation(this.value)">
+                    <p id="guidCat" class="d-none text-danger">Invaild Name - Suppos Choose Between TV or Mobile Phone</p>
+                </div>
+
+                <div class="col-10 mx-auto mb-2">
+                    <label for="productPrice" class="form-label">Product Price</label>
+                    <input oninput="priceValidation(this.value)" type="number" id="productPrice" class="w-100 form-control">
+                    <p  id="guidPrice" class="d-none text-danger">Invaild Price - Suppos Price is more than 1000</p>
+                </div>
+
+                <div class="col-10 mx-auto mb-2">
+                    <label for="productDes" class="form-label">Product Description</label>
+                    <textarea  oninput="descriptionValidation(this.value)" id="productDes" class="w-100 form-control"></textarea>
+                    <p  id="guidDes" class="d-none text-danger">Invaild Name - Suppos contain more than 4 charcter</p>
+                </div>
+                <div class=" mx-auto col-10 ">
+                    <button id="addBtn" onclick="addProduct()" class="btn custombtn mx-auto fw-bold fst-italic text-white border border-2 bg-transparent">Add Product</button>
+                    <button id="updateBtn" onclick="Update(indexOfUpdateElemnt)" class="btn custombtn d-none mx-auto fw-bold fst-italic text-white border border-2 bg-transparent">Update</button>
+                </div>
+            </div>
+
+           <div class="row justify-content-center">
+            <div id="search" class="col-9 mt-5">
+                <input oninput="search(this.value)" placeholder="Search Product..." type="text" class="form-control">
+            </div>
+
+           </div>
+            <div class="row mx-auto mt-4 table-w overflow-auto">
+               <div class="col-md-10 mx-auto ">
+                <table class="table text-center fw-semibold table-dark table-striped table-hover mainTable">
+                    <thead class="table-w">
+                        <tr class="mainTable">
+                            <th>Num</th>
+                            <th>Product Name</th>
+                            <th>Product Category</th>
+                            <th>Product Price</th>
+                            <th>Product Description</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                       
+
+                    </thead>
+                    <tbody class="text-center table-group-divider" id="tableBody">
+                        
+                    </tbody>
+                </table>
+               </div>
+
+            </div>
+
+            
+
+            
+
+            
+
+
+
+
+        </div>
+        
+       
+
+
+    </section>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./JS/bootstrap.bundle.js"></script>
+    <script src="./JS/main.js"></script>
+</body>
+</html>

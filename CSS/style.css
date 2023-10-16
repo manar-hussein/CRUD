@@ -1,0 +1,30 @@
+#curd{
+    background-image: url(../img/galaxy-night-view.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: auto;
+}
+.layer{
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+}
+textarea{
+    resize: none;
+}
+@media screen and (max-width:600px){
+    .mainTable{
+        font-size: 0.5rem;
+    }
+}
+
+.custombtn:hover{
+    background: white !important;
+    color: black !important;
+}
+
+
+
+
+
+    
